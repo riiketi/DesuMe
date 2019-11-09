@@ -1,0 +1,2 @@
+MainPackage=C:\Users\tiikeri\Documents\Visual Studio 2015\Projects\Desu.me\Desu.me\bin\Release\Desu.me_1.0.0.4_AnyCPU.appx
+SymbolPackage=C:\Users\tiikeri\Documents\Visual Studio 2015\Projects\Desu.me\Desu.me\AppPackages\Desu.me_1.0.0.4_Test\Desu.me_1.0.0.4_AnyCPU.appxsym

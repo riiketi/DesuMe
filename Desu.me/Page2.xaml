@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="Desu.me.Page2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Desu.me"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="Back_btn" Content="Back" VerticalAlignment="Top" Width="100" Height="50" Click="Back_btn_Click"/>
+        <TextBlock x:Name="Title"  FontWeight="Bold"  FontSize="50" VerticalAlignment="Top" Foreground="White" Margin="110,0,0,0" Height="60"/>
+        <ListView x:Name="Chapters" Margin="0,60,0,30" SelectionMode="Single" SelectionChanged="Chapters_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Title}" Grid.Column="1" />
+                        <TextBlock Text="{Binding isRead}" Grid.Column="0" />
+
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        
+        <CheckBox x:Name="sort" Content="С первой главы" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="White" Margin="0,0,0,0" Width="160" Click="sort_Click"/>
+        <CheckBox x:Name="unread" Content="Непрочитанные" HorizontalAlignment="Left" Margin="165,0,0,0" VerticalAlignment="Bottom" Width="140" Click="sort_Click" Visibility="Collapsed"/>
+        <CheckBox x:Name="read" Content="Прочитанные" HorizontalAlignment="Left" Margin="310,0,0,0" VerticalAlignment="Bottom" Click="sort_Click" Visibility="Collapsed"/>
+        <CheckBox x:Name="favorite" Content="Добавить в избранное" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Click="favorite_Click" />
+
+
+
+    </Grid>
+</Page>
